@@ -1,0 +1,215 @@
+/* CSS Reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* ***** Start of CSS ***** */
+
+:root {
+  --first-card-colour: hsl(31, 77%, 52%);
+  --second-card-colour: hsl(184, 100%, 22%);
+  --third-card-colour: hsl(179, 100%, 13%);
+
+  --paragraphs-colour: hsla(0, 0%, 100%, 0.75);
+  --background-colour: hsl(0, 0%, 95%);
+
+  --ff-title: 'Big Shoulders Display', cursive;
+  --ff-main: 'Lexend Deca', sans-serif;
+}
+  
+body {
+  height: 100vh;
+  background-color: var(--background-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* Card Details */
+
+.row {
+  max-width: 925px;
+}
+
+.card {
+  padding: 20px;
+}
+
+.col {
+  padding: 0;
+  margin: 0;
+}
+
+.card-body {
+  padding: 15px;
+  margin: 0 15px;
+}
+
+.first {
+  border-radius: 10px 0 0 10px;
+  background-color: var(--first-card-colour);
+}
+
+.middle {
+  border-radius: 0;
+  background-color: var(--second-card-colour);
+}
+
+.last {
+  border-radius: 0 10px 10px 0;
+  background-color: var(--third-card-colour);
+}
+
+/* Image */
+
+.card-img-top {
+  height: 40x;
+  width: 65px;
+  margin: 25px;
+}
+
+/* Texts */
+
+.card-title {
+  color: #fff;
+  font-family: var(--ff-title);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  margin-top: 18px;
+  font-family: var(--ff-main);
+  color: var(--paragraphs-colour);
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+/* Button */
+
+.btn {
+  font-family: var(--ff-main);
+  padding: 10px 25px;
+  margin-top: 55px;
+  margin-bottom: 15px;
+  font-weight: 550;
+}
+
+.sedan-btn {
+  color: var(--first-card-colour)
+}
+
+.sedan-btn:hover {
+  background-color: var(--first-card-colour);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.suv-btn {
+  color: var(--second-card-colour);
+}
+
+.suv-btn:hover {
+  background-color: var(--second-card-colour);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.luxury-btn {
+  color: var(--third-card-colour);
+}
+
+.luxury-btn:hover {
+  background-color: var(--third-card-colour);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 992px) {
+   
+  .row {
+      max-width: 350px;
+  }
+
+  .first {
+      border-radius: 10px 10px 0 0;
+      margin-top: 80px;
+  }
+
+  .last {
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 80px;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+
+}
+
+
+
+
+
+
+/* End Credits */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
